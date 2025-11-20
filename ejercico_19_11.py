@@ -47,7 +47,7 @@ class Producto_Industrial:
     
     @precio_precio_unitario.setter
     def precio(self, valor: float) -> None:
-        if isinstance(valor,float) and valor > 0.0 ():
+        if isinstance(valor,float) and valor > 0 :
             self._precio_precio_unitario = valor
         else:
             raise ValueError("El precio unitario debe ser un numero entero o decimal")
