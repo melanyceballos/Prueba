@@ -6,7 +6,7 @@ class Producto_Industrial:
     _nombre: str
     _categoria: str
     _codigo_interno: str
-    _precio_precio_unitario: float
+    _precio_unitario: float
     _cantidad_inventario: int
     
     @property
@@ -35,20 +35,20 @@ class Producto_Industrial:
         return self._codigo_interno
     
     @codigo_interno.setter
-    def autor(self, valor: str) -> None:
+    def codigo_interno(self, valor: str) -> None:
         if isinstance(valor,str) and valor.strip():
             self._codigo_interno = valor
         else:
             raise ValueError("El codigo interno debe de ser un texto valido")
         
     @property
-    def precio_precio_unitario(self) -> float:
-        return self._precio_precio_unitario
+    def precio_unitario(self) -> float:
+        return self._precio_unitario
     
-    @precio_precio_unitario.setter
-    def precio(self, valor: float) -> None:
+    @precio_unitario.setter
+    def precio_unitario(self, valor: float) -> None:
         if isinstance(valor,float) and valor > 0 :
-            self._precio_precio_unitario = valor
+            self._precio_unitario = valor
         else:
             raise ValueError("El precio unitario debe ser un numero entero o decimal")
     
@@ -65,7 +65,7 @@ class Producto_Industrial:
         
     def __repr__(self) -> str:
         return(
-            f"Producto_Industrial(nombre='{self._nombre}, categoria='{self._categoria}',codigo_interno'{self._codigo_interno},precio_unitario='{self._precio_unitario}',cantidad_inventario='{self._cantidad_inventario}',"
+            f"Producto_Industrial(nombre='{self._nombre}, categoria='{self._categoria}',codigo_interno'{self._codigo_interno}, precio_unitario='{self._precio_unitario}',cantidad_inventario='{self._cantidad_inventario}',"
             
         )
 def main() ->None:
